@@ -1,17 +1,25 @@
 import requests
+import time
 from datetime import datetime
 
 def get_readable_address(address):
     url = f"https://toncenter.com/api/v2/packAddress?address={address}"
-    response = requests.get(url)
-    if response.status_code == 200:
-        data = response.json()
-        if "result" in data:
-            return data["result"]
+    try:
+        response = requests.get(url)
+        # avoid too many requests 
+        time.sleep(1)
+        if response.status_code == 200:
+            data = response.json()
+            if "result" in data:
+                return data["result"]
+            
+            else:
+                return address
         else:
             return address
-    else:
-        return address
+    except:
+        print("request err")
+        
 
 def process_transaction(data):
     sender_address = data['account']['address']
@@ -45,7 +53,7 @@ def process_transaction(data):
 transaction_id = input("Please provide the transaction ID (hex) you want to process:")
 url = f"https://tonapi.io/v2/blockchain/transactions/{transaction_id}"
 headers = {
-    "Authorization": "Bearer AH7TI4ESXIJRFRQAAAAJCGD7ZXOXZ75HK7VO3MP6FGW7W5PHNDEYGSPHEB22TLCIZMDRMMY"
+    "Authorization": "Bearer YOUR_API_KEY"
 }
 
 response = requests.get(url, headers=headers)
