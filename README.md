@@ -1,4 +1,4 @@
-# My Transaction Data Processing Project
+# Transaction Data Analyze
 
 This folder contains code that utilizes the [TON API](https://tonapi.io/) to retrieve transaction data and process it accordingly.
 
