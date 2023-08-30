@@ -45,7 +45,7 @@ def process_transaction(data):
 transaction_id = input("Please provide the transaction ID (hex) you want to process:")
 url = f"https://tonapi.io/v2/blockchain/transactions/{transaction_id}"
 headers = {
-    "Authorization": "Bearer AH7TI4ESXIJRFRQAAAAJCGD7ZXOXZ75HK7VO3MP6FGW7W5PHNDEYGSPHEB22TLCIZMDRMMY"
+    "Authorization": "Bearer YOUR_API_KEY"
 }
 
 response = requests.get(url, headers=headers)
