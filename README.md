@@ -23,9 +23,9 @@ This repository contains code that utilizes the [TON API](https://tonapi.io/) to
 4. **Enter Transaction ID**: The script will prompt you to enter the transaction ID (in hexadecimal format) that you want to process. Provide the transaction ID and press Enter.
 
 5. **View Transaction Details**: The script will fetch transaction data from the TON blockchain API and process it. It will display detailed information about the transaction, including:
+- Sender Address: The address of the sender (originator) of the transaction.
+- Receiver Address: The address of the receiver (destination) of the transaction.
+- Amount: The amount of the asset being transferred in the transaction and the type of asset being transferred (e.g., TON, Jetton, NFT).
+- Status: The status of the transaction (Success or Failure).
+- Confirmation Time: The date and time when the transaction was confirmed.
 
-   - Sender Address: The address of the sender (originator) of the transaction.
-   - Receiver Address: The address of the receiver (destination) of the transaction.
-   - Amount: The amount of the asset being transferred in the transaction and the type of asset being transferred (e.g., TON, Jetton, NFT).
-   - Status: The status of the transaction (Success or Failure).
-   - Confirmation Time: The date and time when the transaction was confirmed.
